@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+    "TH Sarabun New",
+    sans-serif;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffd6e7,
+    #ffeef5,
+    #fff7fb);
+
+    overflow:hidden;
+
+    color:#5c2a3a;
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    background:
+    rgba(255,255,255,.80);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.15);
+
+    position:relative;
+
+    z-index:10;
+}
+
+#title{
+
+    text-align:center;
+
+    font-size:70px;
+
+    color:#d63384;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    2px 2px 8px rgba(255,255,255,.8);
+}
+
+#content{
+
+    white-space:pre-line;
+
+    text-align:center;
+
+    font-size:42px;
+
+    line-height:1.9;
+
+    padding:20px;
+
+    max-height:65vh;
+
+    overflow-y:auto;
+}
+
+.controls{
+
+    text-align:center;
+
+    margin-top:20px;
+}
+
+button{
+
+    border:none;
+
+    padding:12px 30px;
+
+    margin:5px;
+
+    border-radius:20px;
+
+    font-size:24px;
+
+    background:#ff7eb6;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#ff5fa3;
+
+    transform:translateY(-3px);
+}
+
+.sakura{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:32px;
+
+    pointer-events:none;
+
+    animation:fall linear infinite;
+
+    z-index:1;
+}
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* Scrollbar สีชมพู */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffeef5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff7eb6;
+    border-radius:10px;
+}
+/* =========================
+   Responsive สำหรับมือถือ
+========================= */
+
+@media screen and (max-width: 768px){
+
+    .container{
+
+        width:95%;
+
+        margin:10px auto;
+
+        padding:15px;
+
+        border-radius:20px;
+    }
+
+    #title{
+
+        font-size:38px;
+
+        margin-bottom:15px;
+    }
+
+    #content{
+
+        font-size:24px;
+
+        line-height:1.7;
+
+        padding:10px;
+
+        max-height:70vh;
+    }
+
+    .controls{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+    }
+
+    button{
+
+        font-size:18px;
+
+        padding:10px 15px;
+
+        min-width:120px;
+    }
+
+    .sakura{
+
+        font-size:22px;
+    }
+
+}
+
+/* มือถือจอเล็กมาก */
+
+@media screen and (max-width: 480px){
+
+    #title{
+
+        font-size:30px;
+    }
+
+    #content{
+
+        font-size:20px;
+
+        line-height:1.6;
+    }
+
+    button{
+
+        width:100%;
+
+        font-size:16px;
+    }
+
+}
+.content-box{
+
+    overflow-y:auto;
+
+    word-wrap:break-word;
+
+    overflow-wrap:break-word;
+}
